@@ -1,20 +1,74 @@
-# This RAG based project
-## TechStack Used:
-# Langchain:Framework
-# Vector Database:chromaDB
-# HuggingFace
-# LLM:GROQ:llma(free version)
-# How to get the API Key to Acess the LLM
-# Frontend :streamlit
-# DataExtraction:Beautifulsoup
+# 🌐 RAG-Based Website Research Assistant
 
-## project_Name:RAG Based Website Research Assistant
-# steps
-# step1:create a file requirments.txt
-   # pip install -r requirements.txt
-## step2: create a API KEY from groqcloud platform to Access the LLM.
-  # After create a API key and copy the key and store it for further use
-  # save this in .env file api key
-## step3: write the code in main.py and to run in terminal 
-   # how to run the streamlit --> streamlit run main.py   (stremalit run file_name.py)
-## 
+A Retrieval-Augmented Generation (RAG) powered web assistant that extracts content from websites and answers user queries using Large Language Models (LLMs).
+
+---
+
+## 🚀 Project Overview
+
+This project allows users to:
+
+- Input up to 3 website URLs
+- Extract and process website content
+- Store embeddings in a vector database (ChromaDB)
+- Ask questions based only on the provided website content
+- Get accurate, context-based answers with source references
+
+The assistant ensures:
+✔ No hallucination  
+✔ Answers only from provided content  
+✔ Source transparency  
+
+---
+
+## 🎯 Main Aim
+
+To build an intelligent research assistant that:
+
+- Automates website content analysis
+- Uses RAG architecture for factual responses
+- Avoids hallucinated outputs
+- Provides source-backed answers
+
+---
+
+## 🧠 Basic Idea (How It Works)
+
+1. User enters website URLs.
+2. Website content is extracted using BeautifulSoup (via UnstructuredURLLoader).
+3. Content is split into smaller chunks.
+4. Chunks are converted into embeddings using HuggingFace models.
+5. Embeddings are stored in ChromaDB.
+6. When a user asks a question:
+   - Relevant chunks are retrieved.
+   - LLM (Groq - LLaMA model) generates answer strictly from retrieved content.
+   - Sources are displayed.
+
+---
+
+## 🏗️ Tech Stack
+
+### 🔹 Framework
+- LangChain
+
+### 🔹 LLM
+- Groq (LLaMA 3.3-70B Versatile - Free Version)
+
+### 🔹 Embeddings
+- HuggingFace (sentence-transformers/all-MiniLM-L6-v2)
+
+### 🔹 Vector Database
+- ChromaDB
+
+### 🔹 Frontend
+- Streamlit
+
+### 🔹 Data Extraction
+- BeautifulSoup (via UnstructuredURLLoader)
+
+### 🔹 Environment Management
+- Python-dotenv
+
+---
+
+
